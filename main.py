@@ -158,20 +158,20 @@ def send_message(to_user, access_token, city_name, weather, max_temperature, min
                 "color": get_color()
             },
             "humidity": {
-                 "value": weather['humidity'],
+                 "value": humidity,
                  "color": get_random_color()
             },
               "wind": {
-                 "value": weather['wind'],
+                 "value": wind,
                  "color": get_random_color()
             },
              "air_data": {
-                 "value": weather['airData'],
+                 "value": airData,
                  "color": get_random_color()
             },
              "air_quality": {
-                "value": weather['airQuality'],
-                  "color": get_random_color()
+                "value": airQuality,
+                 "color": get_random_color()
             },
             "love_day": {
                 "value": love_days,
@@ -238,5 +238,5 @@ if __name__ == "__main__":
     note_ch, note_en = get_ciba()
     # 公众号推送消息
     for user in users:
-        send_message(user, accessToken, city, weather, max_temperature, min_temperature, note_ch, note_en)
+        send_message(user, accessToken, city, weather, max_temperature, min_temperature,humidity,wind, airData,airQuality,note_ch, note_en)
     os.system("pause")
