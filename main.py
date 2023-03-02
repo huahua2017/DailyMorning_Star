@@ -157,6 +157,22 @@ def send_message(to_user, access_token, city_name, weather, max_temperature, min
                 "value": max_temperature,
                 "color": get_color()
             },
+            "humidity": {
+                 "value": weather['humidity'],
+                 "color": get_random_color()
+            },
+              "wind": {
+                 "value": weather['wind'],
+                 "color": get_random_color()
+            },
+             "air_data": {
+                 "value": weather['airData'],
+                 "color": get_random_color()
+            },
+             "air_quality": {
+                "value": weather['airQuality'],
+                  "color": get_random_color()
+            },
             "love_day": {
                 "value": love_days,
                 "color": get_color()
