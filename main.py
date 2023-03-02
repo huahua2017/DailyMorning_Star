@@ -157,10 +157,6 @@ def send_message(to_user, access_token, city_name, weather, max_temperature, min
                 "value": max_temperature,
                 "color": get_color()
             },
-            "humidity": {
-                 "value": humidity,
-                 "color": get_random_color()
-            },
               "wind": {
                  "value": wind,
                  "color": get_random_color()
